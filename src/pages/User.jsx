@@ -1,9 +1,9 @@
 import React, { useContext, useEffect } from "react";
-import GithubContext from "../../context/github/GithubContext";
+import GithubContext from "../context/github/GithubContext";
 import { Link, useParams } from "react-router-dom";
-import Spinner from "../layout/Spinner";
+import Spinner from "../components/layout/Spinner";
 import { FaCodepen, FaUserFriends, FaUsers } from "react-icons/fa";
-import RepoList from "../layout/repos/RepoList";
+import RepoList from "../components/repos/RepoList";
 
 function User() {
   const { user, getUser, loading, repos, getUserRepo } =
@@ -34,7 +34,7 @@ function User() {
 
   if (loading) {
     return <Spinner />;
-  } else {
+  } 
     return (
       <>
         <div className="w-full mx-auto lg:w-10/12">
@@ -152,7 +152,7 @@ function User() {
         </div>
       </>
     );
-  }
 }
+
 
 export default User;

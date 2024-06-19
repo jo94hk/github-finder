@@ -6,12 +6,12 @@ const githubReducer = (state, action) => {
         users: action.payload,
         loading: false,
       };
-      case "GET_USER":
-        return {
-          ...state,
-          user: action.payload,//한명의 값을 업데이트한다 
-          loading: false,
-        };
+    case "GET_USER":
+      return {
+        ...state,
+        user: action.payload,//한명의z
+        loading: false,
+      };
     case "CLEAR_USERS":
       return {
         ...state,
@@ -22,6 +22,13 @@ const githubReducer = (state, action) => {
         ...state,
         loading: true,
       };
+    case "GET_REPOS":
+      return {
+        ...state,
+        repos: action.payload,
+        loading: false,
+      };
+    //이거 추가 안되었음   repos 추가 해야함
     default:
       return state;
   }
